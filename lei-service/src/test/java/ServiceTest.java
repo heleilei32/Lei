@@ -2,6 +2,8 @@ import com.lunatic.service.StudentService;
 import com.lunatic.batis_model.Student;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -11,11 +13,14 @@ import java.util.List;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath*:spring/applicationContext.xml")
 public class ServiceTest {
+    Logger logger = LoggerFactory.getLogger(ServiceTest.class);
+
     @Resource
     private StudentService studentService;
 
     @Test
     public void addTest() throws Exception {
+
         Student student = new Student(); // student.setId(new Integer("1"));
         student.setName("王同学");
         student.setSex(false);
@@ -47,12 +52,8 @@ public class ServiceTest {
     }
 
     @Test
-    public void selectAll() throws Exception {
-        Student student = new Student();
-        student.setId(new Integer("1"));
-        List<Student> list = studentService.selectAllStudent(student);
-        for (Student s : list) {
-            System.out.println(s.toString());
-        }
+    public void testDemo(){
+        logger.info("123456789");
     }
+
 }
