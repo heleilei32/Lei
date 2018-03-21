@@ -18,8 +18,17 @@ public class IndexController {
     @RequestMapping({"/auth"})
     public String auth(String username,String password){
         logger.info("用户名:"+username+" 密码:"+password);
-        // TODO: 2018/2/2  写鉴权 账号验证
-        return "index";
+        // TODO: 2018/2/2  验证用户名密码
+        if (true){
+            return "redirect:main";
+        }
+        return "login";
+    }
+
+    @RequestMapping({"/main"})
+    public String main(String username,String password){
+        // TODO: 获取权限
+        return "main";
     }
 
 
