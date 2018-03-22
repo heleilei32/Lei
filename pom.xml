@@ -13,6 +13,7 @@
         <module>lei-model</module>
         <module>lei-common</module>
         <module>lei-consle</module>
+        <module>lei-mybatis-plugin</module>
     </modules>
     <packaging>pom</packaging>
 
