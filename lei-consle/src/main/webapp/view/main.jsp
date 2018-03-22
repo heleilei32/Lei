@@ -13,6 +13,7 @@
 
     <script src="/resources/js/jquery.slim.min.js"></script>
     <script src="/resources/js/angular.min.js"></script>
+    <script src="/resources/js/angular-route.js"></script>
     <script src="/resources/js/popper.min.js"></script>
     <script src="/resources/js/bootstrap.min.js"></script>
     <script src="/resources/js/main.js"></script>
@@ -22,6 +23,17 @@
 <body>
 <div id="wrapper">
     <div class="overlay"></div>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+        </div>
+    </nav>
+
 
     <!-- Sidebar -->
     <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
@@ -37,12 +49,6 @@
             <li>
                 <a href="#"><i class="fa fa-fw fa-folder"></i> 第一页</a>
             </li>
-            <li>
-                <a href="#"><i class="fa fa-fw fa-file-o"></i> Second page</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-fw fa-cog"></i> Third page</a>
-            </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown
                     <span class="caret"></span></a>
@@ -50,34 +56,21 @@
                     <li class="dropdown-header">Dropdown heading</li>
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#"><i class="fa fa-fw fa-bank"></i> Page four</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-fw fa-dropbox"></i> Page 5</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-fw fa-twitter"></i> Last page</a>
             </li>
         </ul>
     </nav>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
-            <span class="hamb-top"></span>
-            <span class="hamb-middle"></span>
-            <span class="hamb-bottom"></span>
-        </button>
+    <div id="page-content-wrapper" ne-view>
+
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-8 col-lg-offset-2" >
                     主要内容
                 </div>
             </div>
