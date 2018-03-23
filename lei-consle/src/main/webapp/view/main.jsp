@@ -45,7 +45,7 @@
                 <a href="#/computers"><i class="fa fa-fw fa-folder"></i> 第一页</a>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> 系统管理
+                <a href="return false;" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> 系统管理
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <%--<li class="dropdown-header">Dropdown heading</li>--%>
@@ -63,7 +63,7 @@
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
-    <div  ng-view>
+    <div  id="page-content-wrapper" ng-view>
 
     </div>
     <!-- /#page-content-wrapper -->
