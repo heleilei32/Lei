@@ -11,6 +11,9 @@
     <script src="/resources/js/bootstrap.min.js"></script>
     <script src="/resources/js/main.js"></script>
 
+    <%--单独页面的js--%>
+    <script src="/resources/js/page/system/sysUserManage.js"></script>
+
     <title>主页面</title>
 </head>
 <body>

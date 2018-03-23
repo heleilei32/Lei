@@ -37,3 +37,4 @@ mainApp.config(['$routeProvider', function($routeProvider){
         .when('/sysAuthManage',{template:'这是电脑分类页面'})
         .otherwise({redirectTo:'/'});
 }]);
+

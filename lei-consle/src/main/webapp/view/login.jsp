@@ -10,8 +10,7 @@
     <script src="/resources/js/popper.min.js"></script>
     <script src="/resources/js/bootstrap.min.js"></script>
 
-    <%--单独页面的js--%>
-    <script src="/resources/js/page/system/sysUserManage.js"></script>
+
 
 
     <title>登录页面</title>
