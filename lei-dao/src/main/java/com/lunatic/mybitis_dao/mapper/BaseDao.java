@@ -1,4 +1,4 @@
-package com.lunatic.mybitis_dao.mapper.Base;
+package com.lunatic.mybitis_dao.mapper;
 
 import org.apache.ibatis.annotations.Param;
 

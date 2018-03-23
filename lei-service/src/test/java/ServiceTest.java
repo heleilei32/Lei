@@ -1,4 +1,5 @@
 import com.lunatic.batis_model.SysUser;
+import com.lunatic.mybitis_dao.mapper.SysUserMapper;
 import com.lunatic.service.SystemService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.util.Date;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -17,14 +20,19 @@ public class ServiceTest {
     @Autowired
     SystemService systemService;
 
+
     @Test
     public void testAddUser(){
-        SysUser sysUser = new SysUser();
-        sysUser.setUsername("hll");
-        sysUser.setPassword("123456");
+        for (int i = 1 ; i <= 100 ; i++){
+            SysUser sysUser = new SysUser();
+            sysUser.setUsername("h"+i);
+            sysUser.setPassword(i+"");
+            sysUser.setCreateTime(new Date());
+            sysUser.setUpdateTime(new Date());
 
-        int i = systemService.addSystemUser(sysUser);
-        logger.info("插入数据结果为:"+i);
+            systemService.addSystemUser(sysUser);
+            logger.info("插入数据结果为:"+i);
+        }
     }
 
 
