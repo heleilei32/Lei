@@ -45,13 +45,11 @@
     <!-- 通用 Mapper -->
     <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.lunatic.mybitis_dao.mapper"/>
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <property name="properties">
             <value>
                 mappers=tk.mybatis.mapper.common.Mapper
             </value>
         </property>
-
     </bean>
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

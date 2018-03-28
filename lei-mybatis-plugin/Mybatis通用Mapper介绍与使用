@@ -131,3 +131,6 @@
 
     方法：int deleteByExample(Object example);
     说明：根据Example条件删除数据
+
+
+    https://blog.csdn.net/dwf_android/article/details/79359360
