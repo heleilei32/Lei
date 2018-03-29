@@ -38,7 +38,7 @@ public class ServiceTest {
             logger.info("插入数据结果为:"+i);
         }*/
         SysUser sysUser = new SysUser();
-        sysUser.setId(22);
+        sysUser.setId(24);
         sysUser.setUsername("h");
         sysUser.setPassword("");
         sysUser.setCreateTime(new Date());

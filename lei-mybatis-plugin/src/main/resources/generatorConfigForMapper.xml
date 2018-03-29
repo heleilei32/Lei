@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
+    <!--用来配合通用Mapper-->
     <properties resource="jdbc.properties" />
     <!-- 数据库驱动包位置 -->
     <classPathEntry
@@ -29,7 +30,19 @@
         <!-- 生成service的包名和位置 -->
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER" />
         <!-- 要生成的那些表 -->
-        <table tableName="sys_user" domainObjectName="SysUser" >
+        <table tableName="sys_auth" domainObjectName="SysAuth" >
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <columnRenamingRule searchString="^vc|^dt" replaceString=""/>
+        </table>
+        <table tableName="sys_menu" domainObjectName="SysMenu" >
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <columnRenamingRule searchString="^vc|^dt" replaceString=""/>
+        </table>
+        <table tableName="sys_role" domainObjectName="SysRole" >
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <columnRenamingRule searchString="^vc|^dt" replaceString=""/>
+        </table>
+        <table tableName="sys_usergroup" domainObjectName="SysUsergroup" >
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
             <columnRenamingRule searchString="^vc|^dt" replaceString=""/>
         </table>

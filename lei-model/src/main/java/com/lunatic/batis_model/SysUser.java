@@ -4,10 +4,7 @@ import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "sys_user")
-public class SysUser {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+public class SysUser extends BaseEntity{
 
     /**
      * 用户名
@@ -20,26 +17,6 @@ public class SysUser {
      */
     @Column(name = "vc_password")
     private String password;
-
-    @Column(name = "dt_create_time")
-    private Date createTime;
-
-    @Column(name = "dt_update_time")
-    private Date updateTime;
-
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取用户名
@@ -77,31 +54,4 @@ public class SysUser {
         this.password = password;
     }
 
-    /**
-     * @return dt_create_time
-     */
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    /**
-     * @param createTime
-     */
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * @return dt_update_time
-     */
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    /**
-     * @param updateTime
-     */
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 }
