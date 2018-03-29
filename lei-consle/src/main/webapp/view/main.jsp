@@ -1,26 +1,35 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html ng-app="mainApp">
 <head>
+    <%--css--%>
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link rel="stylesheet" href="/resources/css/style.css">
+    <%--bootstrap_table--%>
+    <link rel="stylesheet" href="/resources/css/bootstarp_table/bootstrap-table.min.css">
 
+
+    <%--js--%>
     <script src="/resources/js/jquery.slim.min.js"></script>
     <script src="/resources/js/angular.min.js"></script>
     <script src="/resources/js/angular-route.js"></script>
     <script src="/resources/js/popper.min.js"></script>
     <script src="/resources/js/bootstrap.min.js"></script>
     <script src="/resources/js/main.js"></script>
-
+    <%--bootstrap_table--%>
+    <script src="/resources/js/bootstarp_table/bootstrap-table.min.js"></script>
+    <script src="/resources/js/bootstarp_table/bootstrap-table-zh-CN.min.js"></script>
     <%--单独页面的js--%>
     <script src="/resources/js/page/system/sysUserManage.js"></script>
 
     <title>主页面</title>
 </head>
 <body>
-<div id="wrapper" class="toggled">
 
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
+
+
+<div id="wrapper" class="toggled">
+    <nav class=" navbar navbar-default " >
+        <div class="container-fluid top_daohang">
             <button type="button" class="hamburger is-open animated fadeInLeft" data-toggle="offcanvas">
                 <span class="hamb-top"></span>
                 <span class="hamb-middle"></span>
@@ -64,6 +73,7 @@
 
     <!-- Page Content -->
     <div  id="page-content-wrapper" ng-view>
+
 
     </div>
     <!-- /#page-content-wrapper -->

@@ -1,6 +1,5 @@
 package com.lunatic.batis_model;
 
-import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "sys_user")

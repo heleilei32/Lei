@@ -39,7 +39,6 @@ html {
 }
 #wrapper.toggled #page-content-wrapper {
     margin-right: -220px;
-    position: absolute;
 }
 #sidebar-wrapper {
     -moz-transition: all 0.5s ease;
@@ -59,8 +58,8 @@ html {
     display: none;
 }
 #page-content-wrapper {
-    padding-top: 10px;
-    padding-left: 5%;
+    /*padding-top: 10px;*/
+    /*padding-left: 5%;*/
     width: 100%;
 }
 /*-------------------------------*/
@@ -293,12 +292,6 @@ body,
 html {
     background-color: #f8f4fd;
 }
-body h1,
-body h2,
-body h3,
-body h4 {
-    color: rgba(255, 255, 255, 0.9);
-}
 body p,
 body blockquote {
     color: rgba(255, 255, 255, 0.7);
@@ -309,4 +302,14 @@ body a {
 }
 body a:hover {
     color: #ffffff;
+}
+
+.top_daohang{
+    background-color: #f8f8f8;
+    position: fixed;
+    top: 0px;
+    left: auto;
+    height: 50px;
+    width: 100%;
+    z-index: 255;
 }
