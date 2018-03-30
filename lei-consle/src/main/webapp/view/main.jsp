@@ -30,8 +30,9 @@
 
     <title>主页面</title>
 </head>
-<body>
 
+<body>
+<div  style="width: 100%;height: 100%;display: flex;">
     <div id="menu">
         <!--隐藏菜单-->
         <div id="ensconce">
@@ -108,9 +109,15 @@
             </div>
         </div>
     </div>
-    <div   ng-view>
+    <div style="margin-left: 2px;height: 100%;width: 100%;flex: 1;">
+        <div style="display: flex; flex-flow: column;">
+            <div style="height: 88px;background-color: red">123131313</div>
+            <div style="flex: 1;" ng-view></div>
+        </div>
+
     </div>
 
+</div>
 
 
 
