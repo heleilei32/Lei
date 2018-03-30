@@ -27,7 +27,7 @@ public class ServiceTest {
 
     @Test
     public void testAddUser(){
-       /* for (int i = 1 ; i <= 100 ; i++){
+        for (int i = 1 ; i <= 100 ; i++){
             SysUser sysUser = new SysUser();
             sysUser.setUsername("h"+i);
             sysUser.setPassword(i+"");
@@ -36,15 +36,7 @@ public class ServiceTest {
 
             systemService.addSystemUser(sysUser);
             logger.info("插入数据结果为:"+i);
-        }*/
-        SysUser sysUser = new SysUser();
-        sysUser.setId(24);
-        sysUser.setUsername("h");
-        sysUser.setPassword("");
-        sysUser.setCreateTime(new Date());
-        sysUser.setUpdateTime(new Date());
-
-        sysUserMapper.insert(sysUser);
+        }
 
 
     }
