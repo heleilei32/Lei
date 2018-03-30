@@ -109,10 +109,10 @@
             </div>
         </div>
     </div>
-    <div style="margin-left: 2px;height: 100%;width: 100%;flex: 1;">
-        <div style="display: flex; flex-flow: column;">
-            <div style="height: 88px;background-color: red">123131313</div>
-            <div style="flex: 1;" ng-view></div>
+    <div style="margin-left: 8px;height: 100%;width: 100%;flex: 1;">
+        <div style="display: flex; flex-flow: column;margin-right: 10px">
+            <div style="height: 88px;background-color:red;margin-top: 2px">123131313</div>
+            <div style="flex: 1;margin-top: 15px;height: 1100px" ng-view></div>
         </div>
 
     </div>
