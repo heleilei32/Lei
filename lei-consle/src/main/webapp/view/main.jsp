@@ -1,4 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
 <html ng-app="mainApp">
 <head>
 
@@ -51,68 +55,22 @@
             <div class="navBox">
                 <ul>
                     <li>
-                        <h2 class="obtain">北京景点<i></i></h2>
+                        <h2 class="obtain"><b>系统管理</b><i></i></h2>
                         <div class="secondary">
-                            <a href="#/sysUserManage"><h3>用户管理</h3></a>
-                            <h3>十三陵</h3>
-                            <h3>圆明园</h3>
-                            <h3>长城</h3>
-                            <h3>雍和宫</h3>
-                            <h3>天坛公园</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <h2 class="obtain">南京景点<i></i></h2>
-                        <div class="secondary">
-                            <h3>栖霞寺</h3>
-                            <h3>夫子庙</h3>
-                            <h3>海底世界</h3>
-                            <h3>中山陵</h3>
-                            <h3>乌衣巷</h3>
-                            <h3>音乐台</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <h2 class="obtain">上海景点<i></i></h2>
-                        <div class="secondary">
-                            <h3>东方明珠</h3>
-                            <h3>外滩</h3>
-                            <h3>豫园</h3>
-                            <h3>文庙</h3>
-                            <h3>世博园</h3>
-                            <h3>田子坊</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <h2 class="obtain">深圳景点<i></i></h2>
-                        <div class="secondary">
-                            <h3>华侨城</h3>
-                            <h3>观澜湖</h3>
-                            <h3>世界之窗</h3>
-                            <h3>东门老街</h3>
-                            <h3>七娘山</h3>
-                            <h3>光明农场</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <h2 class="obtain">广州景点<i></i></h2>
-                        <div class="secondary">
-                            <h3>白云山</h3>
-                            <h3>长隆</h3>
-                            <h3>黄花岗公园</h3>
-                            <h3>中山纪念堂</h3>
-                            <h3>华南植物园</h3>
-                            <h3>南沙湿地公园</h3>
+                            <a href="#/sysUserManage" style="text-decoration:none"><h3>用户管理</h3></a>
+                            <a href="#/sysUserManage" style="text-decoration:none"><h3>用户组管理</h3></a>
+                            <a href="#/sysUserManage" style="text-decoration:none"><h3>角色管理</h3></a>
+                            <a href="#/sysUserManage" style="text-decoration:none"><h3>权限管理</h3></a>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-    <div style="margin-left: 8px;height: 100%;width: 100%;flex: 1;">
+    <div style="margin-left: 14px;height: 100%;width: 100%;flex: 1;">
         <div style="display: flex; flex-flow: column;margin-right: 10px">
-            <div style="height: 88px;background-color:red;margin-top: 2px">123131313</div>
-            <div style="flex: 1;margin-top: 15px;height: 1100px" ng-view></div>
+            <div style="height: 40px;background-color:#eee;margin-top: 2px"></div>
+            <div style="flex: 1;margin-top : 15px ;height: 1100px" ng-view></div>
         </div>
 
     </div>

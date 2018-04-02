@@ -7,7 +7,6 @@ mainApp.controller("sysUserManageCtrl", function ($scope, $http) {
             method: "POST",                            //GET/DELETE/HEAD/JSONP/POST/PUT
         }).success(function (response, status, header, config, statusText) {
             $scope.data = response.data;
-            $scope.tableInit();
         }).error(function (data, header, config, status) {
             //错误处理
         });
@@ -21,7 +20,7 @@ mainApp.controller("sysUserManageCtrl", function ($scope, $http) {
     * data-halign 设置表格标题的对齐方式，优先级大于 align
     * data-sorter 可以自定义扩展排序方法
     */
-    $scope.tableInit = function () {
+    /*$scope.tableInit = function () {
         $('#sysUserTable').bootstrapTable({
             columns: [{
                 field: 'id',
@@ -59,7 +58,7 @@ mainApp.controller("sysUserManageCtrl", function ($scope, $http) {
             }],
             data: $scope.data,
         });
-    }
+    }*/
 
     $scope.search();
 
