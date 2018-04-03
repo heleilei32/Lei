@@ -4,10 +4,10 @@
 <html>
 <head>
     <%--<link rel="stylesheet" href="resources/css/element.css">--%>
-        <!-- 引入样式 -->
-        <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 
-    <script src="resources/js/jquery.slim.min.js"></script>
+    <script src="resources/js/jquery.js"></script>
     <script src="resources/js/vue.js"></script>
     <script src="resources/js/element.js"></script>
     <title>登录页面</title>
@@ -30,25 +30,27 @@
 
 <body>
     <div class="login-box" id="login" >
-        <el-row>
-            <el-col :span="8">
-                <el-input id="name"  v-model="name" placeholder="请输入帐号">
-                    <template slot="prepend">帐号</template>
-                </el-input>
-            </el-col>
-        </el-row>
-        <el-row>
-            <el-col :span="8">
-                <el-input id="password" v-model="password" type="password" placeholder="请输入密码">
-                    <template slot="prepend">密码</template>
-                </el-input>
-            </el-col>
-        </el-row>
-        <el-row>
-            <el-col :span="8">
-                <el-button id="login" v-on:click="check" style="width:100%" type="primary">登录</el-button>
-            </el-col>
-        </el-row>
+        <form id="form" action="auth" method="post">
+            <el-row>
+                <el-col :span="8">
+                    <el-input id="username"  v-model="username" placeholder="请输入帐号">
+                        <template slot="prepend">帐号</template>
+                    </el-input>
+                </el-col>
+            </el-row>
+            <el-row>
+                <el-col :span="8">
+                    <el-input id="password" v-model="password" type="password" placeholder="请输入密码">
+                        <template slot="prepend">密码</template>
+                    </el-input>
+                </el-col>
+            </el-row>
+            <el-row>
+                <el-col :span="8">
+                    <el-button id="login" v-on:click="check" style="width:100%" type="primary">登录</el-button>
+                </el-col>
+            </el-row>
+        </form>
     </div>
 
 </div>
@@ -80,26 +82,29 @@
     new Vue({
         el: '#login',
         data: {
-            name: '',
+            username: '',
             password: ''
         },
         methods: {
             check: function (event) {
                 //获取值
-                var name = this.name;
+                var username = this.username;
                 var password = this.password;
-                if (name == '' || password == '') {
+                if (username == '' || password == '') {
                     this.$message({
                         message: '账号或密码为空！',
                         type: 'error'
                     })
                     return;
                 }
-                $.ajax({
-                    url: 'login',
+
+                $("#form").submit();
+
+                /*$.ajax({
+                    url: 'auth',
                     type: 'post',
                     data: {
-                        name: name,
+                        username: username,
                         password: password
                     },
                     success: function (data) {
@@ -114,7 +119,7 @@
                         alert(data);
                     },
                     dataType: 'json',
-                })
+                })*/
             }
         }
     })
