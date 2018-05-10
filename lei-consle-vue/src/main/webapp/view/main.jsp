@@ -10,6 +10,7 @@
 
     <script src="resources/js/jquery.js"></script>
     <script src="resources/js/vue.js"></script>
+    <script src="resources/js/vue-router.js"></script>
     <script src="resources/js/element.js"></script>
 
 
@@ -32,6 +33,7 @@
                 <el-menu-item-group>
                     <span slot="title">分组一</span>
                     <el-menu-item index="1-1"> <router-link to="/systemManage/sysUserManage">用户管理</router-link></el-menu-item>
+                    <el-menu-item index="1-1"> <router-link to="/bar">bar</router-link></el-menu-item>
                     <el-menu-item index="1-2">选项2</el-menu-item>
                 </el-menu-item-group>
                 <el-menu-item-group title="分组2">

@@ -1,6 +1,7 @@
 import com.lunatic.batis_model.SysUser;
 import com.lunatic.mybitis_dao.mapper.SysUserMapper;
 import com.lunatic.service.SystemService;
+import com.lunatic.service.impl.ThreadDemo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -22,6 +23,8 @@ public class ServiceTest {
     SystemService systemService;
 
 
+
+
     @Autowired
     SysUserMapper sysUserMapper;
 
@@ -37,6 +40,24 @@ public class ServiceTest {
             systemService.addSystemUser(sysUser);
             logger.info("插入数据结果为:"+i);
         }
+    }
+
+
+    @Test
+    public void testThread(){
+
+        ThreadDemo threadDemo1 = new ThreadDemo("111");
+
+
+        Thread thread1 = new Thread(threadDemo1);
+        Thread thread2 = new Thread(threadDemo1);
+
+
+
+
+        thread1.start();
+        thread2.start();
+
 
 
     }
