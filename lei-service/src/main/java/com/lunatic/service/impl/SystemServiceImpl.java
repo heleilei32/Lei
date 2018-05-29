@@ -4,7 +4,6 @@ import com.lunatic.batis_model.SysUser;
 import com.lunatic.mybitis_dao.mapper.SysUserMapper;
 import com.lunatic.pojo.Result;
 import com.lunatic.service.SystemService;
-import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

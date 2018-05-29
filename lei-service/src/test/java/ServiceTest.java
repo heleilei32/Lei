@@ -1,7 +1,6 @@
 import com.lunatic.batis_model.SysUser;
 import com.lunatic.mybitis_dao.mapper.SysUserMapper;
 import com.lunatic.service.SystemService;
-import com.lunatic.service.impl.ThreadDemo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -46,7 +45,7 @@ public class ServiceTest {
     @Test
     public void testThread(){
 
-        ThreadDemo threadDemo1 = new ThreadDemo("111");
+        /*ThreadDemo threadDemo1 = new ThreadDemo("111");
 
 
         Thread thread1 = new Thread(threadDemo1);
@@ -57,7 +56,7 @@ public class ServiceTest {
 
         thread1.start();
         thread2.start();
-
+*/
 
 
     }

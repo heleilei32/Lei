@@ -6,7 +6,7 @@
 
     <groupId>com.lunatic</groupId>
     <artifactId>lei</artifactId>
-    <version>${version}</version>
+    <version>1.0</version>
     <modules>
         <module>lei-dao</module>
         <module>lei-service</module>
