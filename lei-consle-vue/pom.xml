@@ -3,7 +3,7 @@
     <parent>
         <artifactId>lei</artifactId>
         <groupId>com.lunatic</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>lei-consle-vue</artifactId>
@@ -16,7 +16,7 @@
         <dependency>
             <groupId>com.lunatic</groupId>
             <artifactId>lei-service</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 </project>

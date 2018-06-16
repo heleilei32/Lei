@@ -26,25 +26,13 @@
         <!-- 生成模型的包名和位置 -->
         <javaModelGenerator targetPackage="${targetEntityPackage}" targetProject="${targetJavaProject}" />
         <!-- 生成的映射文件包名和位置 -->
-        <sqlMapGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" />
+        <sqlMapGenerator targetPackage="${targetXmlPackage}" targetProject="${targetJavaProject}" />
         <!-- 生成service的包名和位置 -->
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER" />
         <!-- 要生成的那些表 -->
-        <table tableName="sys_auth" domainObjectName="SysAuth" >
+        <table tableName="sys_role" domainObjectName="SysAuth" >
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-            <columnRenamingRule searchString="^vc|^dt" replaceString=""/>
-        </table>
-        <table tableName="sys_menu" domainObjectName="SysMenu" >
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-            <columnRenamingRule searchString="^vc|^dt" replaceString=""/>
-        </table>
-        <table tableName="sys_role" domainObjectName="SysRole" >
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-            <columnRenamingRule searchString="^vc|^dt" replaceString=""/>
-        </table>
-        <table tableName="sys_usergroup" domainObjectName="SysUsergroup" >
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-            <columnRenamingRule searchString="^vc|^dt" replaceString=""/>
+            <columnRenamingRule searchString="^vc|^dt|^nb" replaceString=""/>
         </table>
     </context>
 </generatorConfiguration>
