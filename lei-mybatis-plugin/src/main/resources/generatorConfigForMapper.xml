@@ -30,9 +30,9 @@
         <!-- 生成service的包名和位置 -->
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER" />
         <!-- 要生成的那些表 -->
-        <table tableName="sys_user_access_pv" domainObjectName="pv" >
+        <table tableName="guide_imgtype" domainObjectName="GuideImgtype" >
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-            <columnRenamingRule searchString="^vc|^dt|^nb" replaceString=""/>
+            <columnRenamingRule searchString="^vc|^dt|^nb|^fk" replaceString=""/>
         </table>
     </context>
 </generatorConfiguration>

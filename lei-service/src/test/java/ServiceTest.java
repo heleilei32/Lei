@@ -27,6 +27,8 @@ public class ServiceTest {
     @Autowired
     SysUserMapper sysUserMapper;
 
+
+
     @Test
     public void testAddUser(){
         for (int i = 1 ; i <= 100 ; i++){
@@ -56,6 +58,14 @@ public class ServiceTest {
 
         thread1.start();
         thread2.start();*/
+
+
+
+    }
+
+    @Test
+    public void TestTS(){
+
 
 
 
